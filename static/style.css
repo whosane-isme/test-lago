@@ -1,0 +1,31 @@
+:root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; color: #17211e; background: #f3f6f4; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { width: min(760px, calc(100% - 32px)); margin: 56px auto; }
+header { margin-bottom: 24px; }
+.eyebrow { color: #39765e; font-size: 12px; font-weight: 800; letter-spacing: .13em; }
+h1 { margin: 9px 0; font-size: clamp(30px, 6vw, 46px); letter-spacing: -.04em; }
+header p { max-width: 650px; }
+header p, .muted, footer { color: #61716a; line-height: 1.55; }
+.status-row { display: flex; gap: 10px; margin: 20px 0; }
+.pill { padding: 7px 11px; border: 1px solid #d8e1dc; border-radius: 999px; background: white; color: #52625b; font-size: 13px; }
+.pill.ready { color: #1c704f; border-color: #b5dac7; background: #eef8f2; }
+.panel { padding: 22px; margin: 16px 0; border: 1px solid #e0e7e3; border-radius: 16px; background: white; box-shadow: 0 8px 30px #15251b08; }
+label, h2 { display: block; margin: 0 0 10px; font-size: 15px; font-weight: 700; }
+select { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid #d7e0db; border-radius: 10px; background: white; color: inherit; font: inherit; }
+select:disabled { color: #718079; }
+textarea { width: 100%; resize: vertical; border: 1px solid #d7e0db; border-radius: 10px; padding: 13px; font: inherit; outline-color: #62a884; }
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 14px; }
+button { border: 0; border-radius: 9px; padding: 11px 16px; background: #18724d; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+.error { min-height: 0; margin: 0; color: #ad342f; }
+.error:not(:empty) { margin-top: 12px; }
+.result h2:not(:first-child) { margin-top: 25px; }
+.answer { white-space: pre-wrap; line-height: 1.65; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.stats div { display: grid; gap: 7px; padding: 13px; border-radius: 10px; background: #f4f8f5; }
+.stats strong { font-size: 20px; }
+.stats span { color: #66756f; font-size: 12px; }
+.notice { margin: 18px 0 0; padding: 11px 13px; border-right: 3px solid #80ae96; background: #f4f8f5; color: #465750; line-height: 1.5; }
+footer { padding: 8px 2px; font-size: 12px; }
+@media (max-width: 560px) { .shell { margin: 28px auto; } .panel { padding: 17px; } .stats { grid-template-columns: repeat(2, 1fr); } .controls { align-items: flex-start; flex-direction: column; } }

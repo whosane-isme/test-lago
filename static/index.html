@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مختبر الفوترة مع الذكاء الاصطناعي</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">مشروع تعليمي · OpenRouter + Lago</div>
+      <h1>مختبر الفوترة بالذكاء الاصطناعي</h1>
+      <p>اختر نموذجًا مجانيًا، أرسل سؤالًا، ثم شاهد التوكنز وكيف يمكن إرسالها إلى Lago.</p>
+    </header>
+
+    <section class="status-row" aria-live="polite">
+      <span id="openrouter-status" class="pill">جارٍ التحقق من OpenRouter…</span>
+      <span id="lago-status" class="pill">جارٍ التحقق من Lago…</span>
+    </section>
+
+    <section class="panel">
+      <label for="model-select">النموذج المجاني</label>
+      <select id="model-select" disabled><option>جارٍ تحميل النماذج…</option></select>
+      <p id="model-help" class="muted">القائمة من فهرس OpenRouter، وتعرض النماذج التي سعر الإدخال والإخراج فيها صفر.</p>
+
+      <label for="message">سؤالك</label>
+      <textarea id="message" rows="4" maxlength="4000" placeholder="اكتب سؤالًا قصيرًا للتجربة…"></textarea>
+      <div class="controls">
+        <span id="model-id" class="muted"></span>
+        <button id="send">إرسال السؤال</button>
+      </div>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+
+    <section id="result" class="panel result" hidden>
+      <h2>رد النموذج</h2>
+      <div id="answer" class="answer"></div>
+      <h2>الاستخدام الذي أعاده OpenRouter</h2>
+      <div class="stats">
+        <div><strong id="input-tokens">0</strong><span>توكنز الإدخال</span></div>
+        <div><strong id="output-tokens">0</strong><span>توكنز الإخراج</span></div>
+        <div><strong id="total-tokens">0</strong><span>المجموع</span></div>
+        <div><strong id="provider-cost">$0</strong><span>تكلفة النموذج</span></div>
+      </div>
+      <p id="customer-charge" class="notice"></p>
+      <p id="lago-result" class="notice"></p>
+    </section>
+
+    <footer>المفتاح يبقى في الباك إند. النماذج المجانية قد تتغير أو تضع حدًا للطلبات.</footer>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
